@@ -28,11 +28,11 @@ cur=db.cursor()
 # data=cur.fetchall()
 # print(data[0][2])
 
-query= 'INSERT INTO `gangnam`.`topic` (`id`, `title`, `description`, `author`) VALUES (2 ,"자바" ,"처음에는 가전제품 내에 탑재해 동작하는 프로그램을 위해 개발했지만 현재 웹 애플리케이션 개발에 가장 많이 사용하는 언어 가운데 하나이고, 모바일 기기용 소프트웨어 개발에도 널리 사용하고 있다. 현재 버전 15까지 출시했다.", "GARY");'
+# query= 'INSERT INTO `gangnam`.`topic` (`id`, `title`, `description`, `author`) VALUES (2 ,"자바" ,"처음에는 가전제품 내에 탑재해 동작하는 프로그램을 위해 개발했지만 현재 웹 애플리케이션 개발에 가장 많이 사용하는 언어 가운데 하나이고, 모바일 기기용 소프트웨어 개발에도 널리 사용하고 있다. 현재 버전 15까지 출시했다.", "GARY");'
 
-cur.execute(query)
-db.commit()
-db.close()
+# cur.execute(query)
+# db.commit()
+# db.close()
 
 # query="UPDATE `topic` SET `title` = '파이썬자바', `description` = '파이썬처음에는 가전제품 내에 탑재해 동작하는 프로그램을 위해 개발했지만 현재 웹 애플리케이션 개발에 가장 많이 사용하는 언어 가운데 하나이고, 모바일 기기용 소프트웨어 개발에도 널리 사용하고 있다. 현재 버전 15까지 출시했다.', `author` = 'GARYJ' WHERE (`id` = '2') ;"
 
@@ -45,3 +45,24 @@ db.close()
 # cur.execute(query)
 # db.commit()
 # db.close()
+
+# query= 'INSERT INTO `gangnam`.`topic` (`id`, `title`, `description`, `author`) VALUES (2 ,"자바" ,"처음에는 가전제품 내에 탑재해 동작하는 프로그램을 위해 개발했지만 현재 웹 애플리케이션 개발에 가장 많이 사용하는 언어 가운데 하나이고, 모바일 기기용 소프트웨어 개발에도 널리 사용하고 있다. 현재 버전 15까지 출시했다.", "GARY");'
+
+# cur.execute(query)
+# db.commit()
+# db.close()
+
+query = ''' 
+        CREATE TABLE users(
+            id INT(11) AUTO_INCREMENT PRIMARY KEY, 
+            name VARCHAR(100),
+            email VARCHAR(100),
+            username VARCHAR(30),
+            password VARCHAR(100),
+            register_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP)
+            ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    '''
+
+cur.execute(query)
+db.commit()
+db.close()
