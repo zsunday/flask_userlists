@@ -15,5 +15,20 @@
           <a class="nav-link" href="/articles">Articles</a>
         </li>
       </ul>
+      <nav class="navbar fixed-bottom navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/admin">admin</a>
+        </div>
+      </nav>
+      {% if user_name %}
+      <span>반갑습니다 {{user_name}}님</span>
+      <a class="btn btn-danger btn-lg" href="/logout" role="button">Logout</a>
+      {% else %}
+      <span>게스트입니다</span>
+      <a class="btn btn-danger btn-lg" href="/login" role="button">SignIn</a>
+      <a class="btn btn-success btn-lg" href="/register" role="button">SignUp</a>
+      {% endif %}
+      
     </div>
   </nav>
+

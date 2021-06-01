@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<div class="container">
+    <h1 class="display-4">회원 정보 리스트</h1>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">이름</th>
+            <th scope="col">이메일</th>
+            <th scope="col">아이디</th>
+            <th scope="col">가입 날짜</th>
+          </tr>
+        </thead>
+        <tbody>
+            <ul>
+                {% for member in members %}
+                <tr>
+                  <th scope="row">{{member[0]}}</th>
+                  <td>{{member[1]}}</td>
+                  <td>{{member[2]}}</td>
+                  <td>{{member[3]}}</td>
+                  <td>{{member[5]}}</td>
+                </tr>
+                {% endfor %}
+              </ul> 
+        </tbody>
+      </table>	
+</body>
+</html>
+    </p>  
+  </div>
+<!-- <div class="jumbotron">
+    <h1 class="display-4">회원 정보 리스트</h1>
+    <p>
+      <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>이름</th>
+                <th>이메일</th>
+                <th>USER NAME</th>
+                <th>가입날짜</th>
+            </tr>
+        </thead>
+        <tbody>
+          <ul>
+            {% for member in members %}
+            <tr>
+              <td>{{member[0]}}</td>
+              <td>{{member[1]}}</td>
+              <td>{{member[2]}}</td>
+              <td>{{member[3]}}</td>
+              <td>{{member[5]}}</td>
+            </tr>
+            {% endfor %}
+          </ul>           
+            
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>No</th>
+                <th>이름</th>
+                <th>이메일</th>
+                <th>USER NAME</th>
+                <th>가입날짜</th>
+            </tr>
+        </tfoot>
+	</table>
+	
+</body>
+</html>
+    </p>  
+  </div> -->
+
+{% endblock %}
